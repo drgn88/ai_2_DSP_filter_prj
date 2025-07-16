@@ -80,15 +80,33 @@ module rrc_filter #(
 	logic signed [15:0] trunc_frac_sum;
 	assign trunc_frac_sum = acc_sum[23:8];
 
-	always_ff @( posedge clk or posedge rst) begin : out_sum
+// 잘못 짠 코드: 정수부만 포화시킴
+	// always_ff @( posedge clk or posedge rst) begin : out_sum
+	// 	if(rst) begin
+	// 		filter_out <=0;
+	// 	end
+	// 	else if(trunc_frac_sum[15] == 0) begin
+	// 		filter_out <= {1'b0, trunc_frac_sum[7:0]};
+	// 	end
+	// 	else begin
+	// 		filter_out <= {1'b1, trunc_frac_sum[7:0]};
+	// 	end
+	// end
+
+// 수정한 코드
+	always_ff @( posedge clk or posedge rst ) begin : blockName
 		if(rst) begin
-			filter_out <=0;
+			filter_out <= 0;
 		end
-		else if(trunc_frac_sum[15] == 0) begin
-			filter_out <= {1'b0, trunc_frac_sum[7:0]};
+		// trunc_frac_sum: Q8.8  -- 출력 Q1.8 : -256~255
+		else if(trunc_frac_sum > 255) begin
+			filter_out <= 255;
+		end
+		else if(trunc_frac_sum < -256) begin
+			filter_out <= -256;
 		end
 		else begin
-			filter_out <= {1'b1, trunc_frac_sum[7:0]};
+			filter_out <= trunc_frac_sum;
 		end
 	end
 

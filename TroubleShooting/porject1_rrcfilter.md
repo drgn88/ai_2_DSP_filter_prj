@@ -86,8 +86,11 @@ logic signed [15:0] trunc_frac_sum;
   - Q.16 --> Q.8
   - F[15:0] --> F[15:8]
   - truc_frac_sum = I[7:0].F[15:8]
-
-### 정수부 -  Saturation
+  - 
+///////////////////////////////////////////////////////////////////////
+잘못된 부분
+///////////////////////////////////////////////////////////////////////
+<!-- ### 정수부 -  Saturation
 
 ```verilog
 //변환할 정수부가 1bit라 가능함
@@ -149,4 +152,76 @@ logic signed [15:0] trunc_frac_sum;
     - 변환할 정수부가 표현할 수 있는 최대 범위로 표현
     - 양수니까 MSB = 0
     - 따라서 0(MSB)1(최대 정수 범위)
+ --><br>
 
+///////////////////////////////////////////////////////////////////////
+
+
+⚠️이렇게 하면 안됨 --> 내가 잘못 이해한거임
+---
+
+# 내가 잘못 이해하고 잘못 설계한 코드
+
+```verilog
+	always_ff @( posedge clk or posedge rst) begin : out_sum
+		if(rst) begin
+			filter_out <=0;
+		end
+		else if(trunc_frac_sum[15] == 0) begin
+			filter_out <= {1'b0, trunc_frac_sum[7:0]};
+		end
+		else begin
+			filter_out <= {1'b1, trunc_frac_sum[7:0]};
+		end
+	end
+```
+
+- 지금 정수부만 포화시킴
+  - 소수부는 포화 안됨
+  - 예를 들어, 127.123456을 정수 1자리, 소수 3자리로 바꾼다면
+  - 나의 경우(error): 9.123 --> 소수부 포화가 안됨 --> 9.999가 정상 변환값임
+
+# 수정한 코드
+
+⭐HW 안에서 연산을 할 때는 integer형식임을 인지하고 연산을 수행하자 --> 소수는 나중에 2^(소수비트)로 나눠주면됨
+---
+> 정수로 연산을 수행하자
+
+```verilog
+	always_ff @( posedge clk or posedge rst ) begin : blockName
+		if(rst) begin
+			filter_out <= 0;
+		end
+		// trunc_frac_sum: Q8.8  -- 출력 Q1.8 : -256~255
+		else if(trunc_frac_sum > 255) begin
+			filter_out <= 255;
+		end
+		else if(trunc_frac_sum < -256) begin
+			filter_out <= -256;
+		end
+		else begin
+			filter_out <= trunc_frac_sum;
+		end
+	end
+```
+- 소수부를 Truncation하고 Q8.8인 상태 --> trunc_frac_sum
+- 변환해야될 출력 Q1.8: filter_out --> 값의 표현범위 = -256~255
+  - ```trunc_frac_sum``` > 255보다 크면
+    - 출력 ```filter_out```을 255로 Saturation
+  - ```trunc_frac_sum``` < -256보다 작으면
+    - 출력 ```filter_out```을 -256으로 Saturation
+
+## ⚠️주의할 사항(깨달은 점)
+- 회로 안에서 연산할 때는 정수로서 연산을 수행하자
+  - 정수부, 소수부 따로 나눠서 생각X
+  - 소수부를 Truncation할 때만 고려
+- 소수부를 먼저 Truncation을 하고
+  - 이후 변환할 값의 비트 범위를 벗어나는지 확인
+
+## 참고) 소수부 자리수와 Truncation
+- 소수부 이하 2비트, 1비트로 줄이는 극단적 경우
+  - 현실에선 거의 없음
+- 따라서 대부분 truncation하는 경우 Truncation되는 소수의 값이 매우 작음
+  - 대부분의 경우 truncation하는 경우 값의 오차가 그리 크지않음
+- 특별한 case가 아닌 경우 round와 truncation의 성능 차이가 거의 없다
+  - **교수님 피셜임**
