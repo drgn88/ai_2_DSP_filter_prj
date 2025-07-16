@@ -1,6 +1,6 @@
 % 파일 이름 정의
 file1_name = '교수님_제시_정답_결과.txt';
-file2_name = '내_결과_파일.txt';
+file2_name = '승범이_결과.txt';
 
 % 비교할 줄 수 정의
 lines_to_compare = 78992;
