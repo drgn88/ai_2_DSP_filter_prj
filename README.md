@@ -47,4 +47,4 @@ RRC_filter Design
 ## 필요한 지식
 
 ### Fixed Point Number
-[Fixed_point_Number란?]()
+[Fixed_point_Number란?](./Study/1.Fixed_Point_Number.md)
