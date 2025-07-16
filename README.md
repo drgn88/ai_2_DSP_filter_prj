@@ -18,6 +18,11 @@ Tool
 - Vivado(Verification)
   - Verdi랑 차이 비교해볼려고 여기서도 돌려봄
 
+# 🤔필요한 지식
+
+### Fixed Point Number
+[Fixed_point_Number란?](./Study/1.Fixed_Point_Number.md)
+
 # 📆WorkFlow
 
 ## 250715
@@ -44,7 +49,3 @@ RRC_filter Design
 | &nbsp; |   0   |  -1   |   1   |   0   |  -1   |   2   |   0   |  -2   |   2   |   0   |  -6   |   8   |  10   |  -28  |  -14  |  111  |  196  |  111  |  -14  |  -28  |  10   |   8   |  -6   |   0   |   2   |  -2   |   0   |   2   |  -1   |   0   |   1   |  -1   |   0   |
 
 
-## 필요한 지식
-
-### Fixed Point Number
-[Fixed_point_Number란?](./Study/1.Fixed_Point_Number.md)
