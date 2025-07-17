@@ -1,0 +1,1724 @@
+ 
+****************************************
+Report : area
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Library(s) Used:
+
+    GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C (File: /pdk/GF22FDX_SC7P5T_116CPP_BASE_CSC20L_FDK_RELV02R80/db/GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C.db)
+
+Number of ports:                          920
+Number of nets:                          3004
+Number of cells:                         2338
+Number of combinational cells:           2025
+Number of sequential cells:               288
+Number of macros/black boxes:               0
+Number of buf/inv:                        579
+Number of references:                     105
+
+Combinational area:               1203.453591
+Buf/Inv area:                      211.583997
+Noncombinational area:             544.619989
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1748.073580
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  -----------------------
+rrc_filter                        1748.0736    100.0   649.9248   544.6200  0.0000  rrc_filter
+MUL1                                17.1216      1.0    17.1216     0.0000  0.0000  multiplier_9b_WIDTH9_31
+MUL10                               29.6496      1.7    29.6496     0.0000  0.0000  multiplier_9b_WIDTH9_22
+MUL11                                5.0112      0.3     5.0112     0.0000  0.0000  multiplier_9b_WIDTH9_21
+MUL12                               27.2136      1.6    27.2136     0.0000  0.0000  multiplier_9b_WIDTH9_20
+MUL13                               29.3016      1.7    29.3016     0.0000  0.0000  multiplier_9b_WIDTH9_19
+MUL14                               32.9208      1.9    32.9208     0.0000  0.0000  multiplier_9b_WIDTH9_18
+MUL15                               65.0760      3.7    65.0760     0.0000  0.0000  multiplier_9b_WIDTH9_17
+MUL16                               47.6760      2.7    47.6760     0.0000  0.0000  multiplier_9b_WIDTH9_16
+MUL17                               67.0248      3.8    67.0248     0.0000  0.0000  multiplier_9b_WIDTH9_15
+MUL18                               29.2320      1.7    29.2320     0.0000  0.0000  multiplier_9b_WIDTH9_14
+MUL19                               30.6936      1.8    30.6936     0.0000  0.0000  multiplier_9b_WIDTH9_13
+MUL2                                 4.8024      0.3     4.8024     0.0000  0.0000  multiplier_9b_WIDTH9_30
+MUL20                               28.0488      1.6    28.0488     0.0000  0.0000  multiplier_9b_WIDTH9_12
+MUL21                                5.0112      0.3     5.0112     0.0000  0.0000  multiplier_9b_WIDTH9_11
+MUL22                               31.6680      1.8    31.6680     0.0000  0.0000  multiplier_9b_WIDTH9_10
+MUL24                                4.5936      0.3     4.5936     0.0000  0.0000  multiplier_9b_WIDTH9_8
+MUL25                               16.4256      0.9    16.4256     0.0000  0.0000  multiplier_9b_WIDTH9_7
+MUL27                                5.0808      0.3     5.0808     0.0000  0.0000  multiplier_9b_WIDTH9_5
+MUL28                               14.5464      0.8    14.5464     0.0000  0.0000  multiplier_9b_WIDTH9_4
+MUL30                                5.0808      0.3     5.0808     0.0000  0.0000  multiplier_9b_WIDTH9_2
+MUL31                               16.8432      1.0    16.8432     0.0000  0.0000  multiplier_9b_WIDTH9_1
+MUL4                                15.0336      0.9    15.0336     0.0000  0.0000  multiplier_9b_WIDTH9_28
+MUL5                                 4.1760      0.2     4.1760     0.0000  0.0000  multiplier_9b_WIDTH9_27
+MUL7                                16.2168      0.9    16.2168     0.0000  0.0000  multiplier_9b_WIDTH9_25
+MUL8                                 5.0808      0.3     5.0808     0.0000  0.0000  multiplier_9b_WIDTH9_24
+--------------------------------  ---------  -------  ---------  ---------  ------  -----------------------
+Total                                                 1203.4536   544.6200  0.0000
+
+1
+ 
+****************************************
+Report : qor
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+
+  Timing Path Group 'cnt_clk'
+  -----------------------------------
+  Levels of Logic:              19.00
+  Critical Path Length:        578.08
+  Critical Path Slack:        -106.06
+  Critical Path Clk Period:    560.00
+  Total Negative Slack:       -908.19
+  No. of Violating Paths:        9.00
+  Worst Hold Violation:        -15.05
+  Total Hold Violation:       -841.85
+  No. of Hold Violations:      141.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         25
+  Hierarchical Port Count:        900
+  Leaf Cell Count:               2313
+  Buf/Inv Cell Count:             579
+  Buf Cell Count:                 131
+  Inv Cell Count:                 448
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      2025
+  Sequential Cell Count:          288
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     1203.453591
+  Noncombinational Area:   544.619989
+  Buf/Inv Area:            211.583997
+  Total Buffer Area:            70.23
+  Total Inverter Area:         141.36
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:              1748.073580
+  Design Area:            1748.073580
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          2610
+  Nets With Violations:          2483
+  Max Trans Violations:          2483
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: kccisynop2
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.36
+  Logic Optimization:                  5.99
+  Mapping Optimization:               58.26
+  -----------------------------------------
+  Overall Compile Time:               85.50
+  Overall Compile Wall Clock Time:    39.41
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 106.06  TNS: 908.19  Number of Violating Paths: 9
+
+
+  Design (Hold)  WNS: 15.05  TNS: 841.85  Number of Violating Paths: 141
+
+  --------------------------------------------------------------------
+
+
+1
+ 
+****************************************
+Report : resources
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| DP_OP_95J1_122_318              |            |                            |
+|                | DP_OP_95J1_122_318 |        |                            |
+=============================================================================
+
+Datapath Report for DP_OP_95J1_122_318
+==============================================================================
+| Cell                 | Contained Operations                                |
+==============================================================================
+| DP_OP_95J1_122_318   | add_71 (rrc_filter.sv:71)                           |
+|                      | add_71_2 (rrc_filter.sv:71)                         |
+|                      | add_71_3 (rrc_filter.sv:71)                         |
+|                      | add_71_4 (rrc_filter.sv:71)                         |
+|                      | add_71_5 (rrc_filter.sv:71)                         |
+|                      | add_71_6 (rrc_filter.sv:71)                         |
+|                      | add_71_7 (rrc_filter.sv:71)                         |
+|                      | add_71_8 (rrc_filter.sv:71)                         |
+|                      | add_71_9 (rrc_filter.sv:71)                         |
+|                      | add_71_10 (rrc_filter.sv:71)                        |
+|                      | add_71_11 (rrc_filter.sv:71)                        |
+|                      | add_71_12 (rrc_filter.sv:71)                        |
+|                      | add_71_13 (rrc_filter.sv:71)                        |
+|                      | add_71_14 (rrc_filter.sv:71)                        |
+|                      | add_71_15 (rrc_filter.sv:71)                        |
+|                      | add_71_16 (rrc_filter.sv:71)                        |
+|                      | add_71_17 (rrc_filter.sv:71)                        |
+|                      | add_71_18 (rrc_filter.sv:71)                        |
+|                      | add_71_19 (rrc_filter.sv:71)                        |
+|                      | add_71_20 (rrc_filter.sv:71)                        |
+|                      | add_71_21 (rrc_filter.sv:71)                        |
+|                      | add_71_22 (rrc_filter.sv:71)                        |
+|                      | add_71_23 (rrc_filter.sv:71)                        |
+|                      | add_71_24 (rrc_filter.sv:71)                        |
+|                      | add_71_25 (rrc_filter.sv:71)                        |
+|                      | add_71_26 (rrc_filter.sv:71)                        |
+|                      | add_71_27 (rrc_filter.sv:71)                        |
+|                      | add_71_28 (rrc_filter.sv:71)                        |
+|                      | add_71_29 (rrc_filter.sv:71)                        |
+|                      | add_71_30 (rrc_filter.sv:71)                        |
+|                      | add_71_31 (rrc_filter.sv:71)                        |
+|                      | add_71_32 (rrc_filter.sv:71)                        |
+|                      | gt_102 (rrc_filter.sv:102)                          |
+|                      | lt_105 (rrc_filter.sv:105)                          |
+==============================================================================
+
+==============================================================================
+|       |      | Data     |       |                                          |
+| Var   | Type | Class    | Width | Expression                               |
+==============================================================================
+| I1    | PI   | Signed   | 18    |                                          |
+| I2    | PI   | Signed   | 18    |                                          |
+| I3    | PI   | Signed   | 18    |                                          |
+| I4    | PI   | Signed   | 18    |                                          |
+| I5    | PI   | Signed   | 18    |                                          |
+| I6    | PI   | Signed   | 18    |                                          |
+| I7    | PI   | Signed   | 18    |                                          |
+| I8    | PI   | Signed   | 18    |                                          |
+| I9    | PI   | Signed   | 18    |                                          |
+| I10   | PI   | Signed   | 18    |                                          |
+| I11   | PI   | Signed   | 18    |                                          |
+| I12   | PI   | Signed   | 18    |                                          |
+| I13   | PI   | Signed   | 18    |                                          |
+| I14   | PI   | Signed   | 18    |                                          |
+| I15   | PI   | Signed   | 18    |                                          |
+| I16   | PI   | Signed   | 18    |                                          |
+| I17   | PI   | Signed   | 18    |                                          |
+| I18   | PI   | Signed   | 18    |                                          |
+| I19   | PI   | Signed   | 18    |                                          |
+| I20   | PI   | Signed   | 18    |                                          |
+| I21   | PI   | Signed   | 18    |                                          |
+| I22   | PI   | Signed   | 18    |                                          |
+| I23   | PI   | Signed   | 18    |                                          |
+| I24   | PI   | Signed   | 18    |                                          |
+| I25   | PI   | Signed   | 18    |                                          |
+| T60   | IFO  | Signed   | 16    | O1[23:8]                                 |
+| O1    | PO   | Signed   | 24    | I1 + I2 + I3 + I4 + I5 + I6 + I7 + I8 + I9 + I10 + I11 + I12 + I13 + I14 + I15 + I16 + I17 + I18 + I19 + I20 + I21 + I22 + I23 + I24 + I25 (rrc_filter.sv:71) |
+| O2    | PO   | Signed   | 1     | T60 > $signed(9'b011111111) (rrc_filter.sv:102) |
+| O3    | PO   | Signed   | 1     | T60 < $signed(9'b100000000) (rrc_filter.sv:105) |
+==============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| DP_OP_95J1_122_318 | DP_OP_95J1_122_318 | str (area,speed) |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_14
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_13
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_12
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=5  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_11
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+=============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_10
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_7
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_24
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+=============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_8
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+=============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_5
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+=============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_15
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=8  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | pparch (area,speed)                 |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_2
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_28
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_4
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_1
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_16
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_17
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=8  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | pparch (area,speed)                 |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_18
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_19
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_20
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=5  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_21
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+=============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_22
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_25
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_27
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+=============================================================================
+
+
+No implementations to report
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_30
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : multiplier_9b_WIDTH9_31
+****************************************
+
+Resource Report for this hierarchy in file ./src/rrc_filter.sv
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| mult_x_1       | DW_mult_tc     | a_width=9  | mult_127 (rrc_filter.sv:127) |
+               |                | b_width=9  |                            |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_x_1           | DW_mult_tc       | apparch (area)     |                |
+===============================================================================
+
+1
+ 
+****************************************
+Report : reference
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+SC7P5T_AN2X1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000       2      0.696000  
+SC7P5T_AN2X2_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000       2      0.696000  
+SC7P5T_AN2X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.417600       7      2.923200  
+SC7P5T_AN2X4_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.626400       1      0.626400  
+SC7P5T_AO21IAX2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.556800      11      6.124800  
+SC7P5T_AO21IAX3_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.835200       2      1.670400  
+SC7P5T_AO21IAX4_P_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.835200       2      1.670400  
+SC7P5T_AO21X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.487200       2      0.974400  
+SC7P5T_AO22IA1A2X1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.556800       1      0.556800  
+SC7P5T_AO22IA1A2X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.765600       6      4.593600  
+SC7P5T_AO22IA1A2X4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.322400       1      1.322400  
+SC7P5T_AOI21X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.556800       5      2.784000  
+SC7P5T_AOI21X3_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.765600       1      0.765600  
+SC7P5T_AOI21X4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.974400       1      0.974400  
+SC7P5T_AOI211X4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.252800       1      1.252800  
+SC7P5T_BUFX1_MR_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.278400       1      0.278400  
+SC7P5T_BUFX2_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.278400       1      0.278400  
+SC7P5T_BUFX8_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.835200       1      0.835200  
+SC7P5T_CKBUFX2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.487200       3      1.461600  
+SC7P5T_CKOA21X3_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.974400       1      0.974400  
+SC7P5T_CKXOR2X4_P_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.044000       1      1.044000  
+SC7P5T_DFFRQNX2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.809600       1      1.809600  n
+SC7P5T_DFFRQX1_AS_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.461600      39     57.002398  n
+SC7P5T_DFFRQX4_S_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.948800     230    448.223993  n
+SC7P5T_FAX1_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.322400       2      2.644800  r
+SC7P5T_FAX2_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.461600     147    214.855192  r
+SC7P5T_FAX4_P_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  2.018400       1      2.018400  r
+SC7P5T_FAX6_CSC20L GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  3.967200       5     19.836000  r
+SC7P5T_FCGENIX1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.556800       8      4.454400  
+SC7P5T_FCGENIX2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.974400       6      5.846400  
+SC7P5T_FCGENIX4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.670400       2      3.340800  
+SC7P5T_HAX2_CSC20L GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.113600       5      5.568000  r
+SC7P5T_INVX1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.139200      28      3.897600  
+SC7P5T_INVX2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.208800      73     15.242400  
+SC7P5T_INVX3_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.278400      10      2.784000  
+SC7P5T_INVX4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000      15      5.220000  
+SC7P5T_INVX6_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.487200       3      1.461600  
+SC7P5T_INVX20_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.461600      34     49.694398  
+SC7P5T_ND2IAX1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000       1      0.348000  
+SC7P5T_ND2IAX2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.487200       6      2.923200  
+SC7P5T_ND2IAX3_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.696000       1      0.696000  
+SC7P5T_ND2IAX4_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.765600       1      0.765600  
+SC7P5T_ND2X1_MR_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.208800      27      5.637600  
+SC7P5T_ND2X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000     114     39.671999  
+SC7P5T_ND2X3_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.487200       9      4.384800  
+SC7P5T_ND2X4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.626400       2      1.252800  
+SC7P5T_ND2X6_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.904800       1      0.904800  
+SC7P5T_NR2IAX1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000       1      0.348000  
+SC7P5T_NR2IAX2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.487200       2      0.974400  
+SC7P5T_NR2X1_MR_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.208800       5      1.044000  
+SC7P5T_NR2X2_MR_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000      17      5.916000  
+SC7P5T_NR2X3_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.487200      12      5.846400  
+SC7P5T_NR2X4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.626400       8      5.011200  
+SC7P5T_NR3IAX2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.696000       1      0.696000  
+SC7P5T_NR3X4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.904800       1      0.904800  
+SC7P5T_OA21IAX2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.556800       3      1.670400  
+SC7P5T_OA21X1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.487200       2      0.974400  
+SC7P5T_OA21X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.556800       4      2.227200  
+SC7P5T_OA21X4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.835200       1      0.835200  
+SC7P5T_OA22IA1A2X3_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.113600       1      1.113600  
+SC7P5T_OAI21IAX1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.487200       3      1.461600  
+SC7P5T_OAI21X1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000       9      3.132000  
+SC7P5T_OAI21X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.556800      51     28.396800  
+SC7P5T_OAI21X4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.974400       6      5.846400  
+SC7P5T_OR2X1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000       4      1.392000  
+SC7P5T_OR2X2_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.348000      10      3.480000  
+SC7P5T_OR2X3_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.626400       1      0.626400  
+SC7P5T_OR2X4_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.626400       3      1.879200  
+SC7P5T_OR2X4_P_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.556800       1      0.556800  
+SC7P5T_SDFFRQX2_A_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.879200       9     16.912800  n
+SC7P5T_SDFFRQX4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  2.296800       2      4.593600  n
+SC7P5T_SDFFRQX4_S_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  2.296800       7     16.077599  n
+SC7P5T_TIELOX1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.139200       1      0.139200  
+SC7P5T_XNR2X1_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.765600       4      3.062400  
+SC7P5T_XNR2X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.765600     107     81.919203  
+SC7P5T_XNR2X4_P_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.904800       1      0.904800  
+SC7P5T_XNR3X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.322400       1      1.322400  
+SC7P5T_XOR2X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  0.765600      25     19.140001  
+SC7P5T_XOR3X2_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  1.322400      31     40.994399  
+SC7P5T_XOR3X4_CSC20L
+                   GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+                                  2.157600       1      2.157600  
+multiplier_9b_WIDTH9_1           16.843200       1     16.843200  h
+multiplier_9b_WIDTH9_2            5.080800       1      5.080800  h
+multiplier_9b_WIDTH9_4           14.546400       1     14.546400  h
+multiplier_9b_WIDTH9_5            5.080800       1      5.080800  h
+multiplier_9b_WIDTH9_7           16.425600       1     16.425600  h
+multiplier_9b_WIDTH9_8            4.593600       1      4.593600  h
+multiplier_9b_WIDTH9_10          31.668000       1     31.668000  h
+multiplier_9b_WIDTH9_11           5.011200       1      5.011200  h
+multiplier_9b_WIDTH9_12          28.048800       1     28.048800  h
+multiplier_9b_WIDTH9_13          30.693600       1     30.693600  h
+multiplier_9b_WIDTH9_14          29.232000       1     29.232000  h
+multiplier_9b_WIDTH9_15          67.024800       1     67.024800  h
+multiplier_9b_WIDTH9_16          47.676000       1     47.676000  h
+multiplier_9b_WIDTH9_17          65.076000       1     65.076000  h
+multiplier_9b_WIDTH9_18          32.920800       1     32.920800  h
+multiplier_9b_WIDTH9_19          29.301600       1     29.301600  h
+multiplier_9b_WIDTH9_20          27.213600       1     27.213600  h
+multiplier_9b_WIDTH9_21           5.011200       1      5.011200  h
+multiplier_9b_WIDTH9_22          29.649600       1     29.649600  h
+multiplier_9b_WIDTH9_24           5.080800       1      5.080800  h
+multiplier_9b_WIDTH9_25          16.216800       1     16.216800  h
+multiplier_9b_WIDTH9_27           4.176000       1      4.176000  h
+multiplier_9b_WIDTH9_28          15.033600       1     15.033600  h
+multiplier_9b_WIDTH9_30           4.802400       1      4.802400  h
+multiplier_9b_WIDTH9_31          17.121600       1     17.121600  h
+-----------------------------------------------------------------------------
+Total 105 references                                 1748.073580
+1
+ 
+****************************************
+Report : net fanout
+        -threshold 1000
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+
+
+Attributes:
+   dr - drc disabled
+    c - annotated capacitance
+    d - dont_touch
+    i - ideal_net
+    I - ideal_network
+    p - includes pin load
+    r - annotated resistance
+    h - high fanout
+
+Net                 Fanout   Attributes   Capacitance   Driver
+--------------------------------------------------------------------------------
+1
+-----------------------
+-- I/O timing report --
+-----------------------
+
+****************************************
+From : clk
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: clk (clock source 'cnt_clk')
+  Endpoint: shift_reg_out_reg_2__0_/CLK (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                  500.00     500.00 r
+  clk (in)                                                0.00     500.00 r
+  shift_reg_out_reg_2__0_/CLK (SC7P5T_DFFRQX1_AS_CSC20L)
+                                                          0.00     500.00 r
+  data arrival time                                                500.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : rst
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: rst (input port)
+  Endpoint: shift_reg_out_reg_25__8_/RESET (internal pin)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  rst (in)                                                0.00       0.00 f
+  U598/Z (SC7P5T_INVX20_CSC20L)                           5.13       5.13 r
+  shift_reg_out_reg_25__8_/RESET (SC7P5T_DFFRQX1_AS_CSC20L)
+                                                          0.00       5.13 r
+  data arrival time                                                  5.13
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : filter_in[8]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_in[8]
+              (input port)
+  Endpoint: shift_reg_out_reg_0__8_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  filter_in[8] (in)                                       0.00       0.00 r
+  shift_reg_out_reg_0__8_/D (SC7P5T_SDFFRQX4_CSC20L)      0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : filter_in[7]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_in[7]
+              (input port)
+  Endpoint: shift_reg_out_reg_0__7_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  filter_in[7] (in)                                       0.00       0.00 r
+  shift_reg_out_reg_0__7_/D (SC7P5T_SDFFRQX4_CSC20L)      0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : filter_in[6]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_in[6]
+              (input port)
+  Endpoint: shift_reg_out_reg_0__6_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  filter_in[6] (in)                                       0.00       0.00 r
+  shift_reg_out_reg_0__6_/D (SC7P5T_SDFFRQX4_S_CSC20L)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : filter_in[5]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_in[5]
+              (input port)
+  Endpoint: shift_reg_out_reg_0__5_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  filter_in[5] (in)                                       0.00       0.00 r
+  shift_reg_out_reg_0__5_/D (SC7P5T_SDFFRQX4_S_CSC20L)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : filter_in[4]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_in[4]
+              (input port)
+  Endpoint: shift_reg_out_reg_0__4_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  filter_in[4] (in)                                       0.00       0.00 r
+  shift_reg_out_reg_0__4_/D (SC7P5T_SDFFRQX4_S_CSC20L)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : filter_in[3]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_in[3]
+              (input port)
+  Endpoint: shift_reg_out_reg_0__3_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  filter_in[3] (in)                                       0.00       0.00 r
+  shift_reg_out_reg_0__3_/D (SC7P5T_SDFFRQX4_S_CSC20L)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : filter_in[2]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_in[2]
+              (input port)
+  Endpoint: shift_reg_out_reg_0__2_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  filter_in[2] (in)                                       0.00       0.00 r
+  shift_reg_out_reg_0__2_/D (SC7P5T_SDFFRQX4_S_CSC20L)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : filter_in[1]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_in[1]
+              (input port)
+  Endpoint: shift_reg_out_reg_0__1_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  filter_in[1] (in)                                       0.00       0.00 r
+  shift_reg_out_reg_0__1_/D (SC7P5T_SDFFRQX4_S_CSC20L)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+From : filter_in[0]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_in[0]
+              (input port)
+  Endpoint: shift_reg_out_reg_0__0_
+            (rising edge-triggered flip-flop clocked by cnt_clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  filter_in[0] (in)                                       0.00       0.00 r
+  shift_reg_out_reg_0__0_/D (SC7P5T_SDFFRQX4_S_CSC20L)
+                                                          0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+To : filter_out[8]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_out_reg_8_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: filter_out[8]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter_out_reg_8_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)        0.00       0.00 r
+  filter_out_reg_8_/Q (SC7P5T_SDFFRQX2_A_CSC20L)         58.17      58.17 f
+  filter_out[8] (out)                                     0.00      58.17 f
+  data arrival time                                                 58.17
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+To : filter_out[7]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_out_reg_7_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: filter_out[7]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter_out_reg_7_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)        0.00       0.00 r
+  filter_out_reg_7_/Q (SC7P5T_SDFFRQX2_A_CSC20L)         58.17      58.17 f
+  filter_out[7] (out)                                     0.00      58.17 f
+  data arrival time                                                 58.17
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+To : filter_out[6]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_out_reg_6_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: filter_out[6]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter_out_reg_6_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)        0.00       0.00 r
+  filter_out_reg_6_/Q (SC7P5T_SDFFRQX2_A_CSC20L)         58.17      58.17 f
+  filter_out[6] (out)                                     0.00      58.17 f
+  data arrival time                                                 58.17
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+To : filter_out[5]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_out_reg_5_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: filter_out[5]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter_out_reg_5_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)        0.00       0.00 r
+  filter_out_reg_5_/Q (SC7P5T_SDFFRQX2_A_CSC20L)         58.17      58.17 f
+  filter_out[5] (out)                                     0.00      58.17 f
+  data arrival time                                                 58.17
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+To : filter_out[4]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_out_reg_4_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: filter_out[4]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter_out_reg_4_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)        0.00       0.00 r
+  filter_out_reg_4_/Q (SC7P5T_SDFFRQX2_A_CSC20L)         58.17      58.17 f
+  filter_out[4] (out)                                     0.00      58.17 f
+  data arrival time                                                 58.17
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+To : filter_out[3]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_out_reg_3_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: filter_out[3]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter_out_reg_3_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)        0.00       0.00 r
+  filter_out_reg_3_/Q (SC7P5T_SDFFRQX2_A_CSC20L)         58.17      58.17 f
+  filter_out[3] (out)                                     0.00      58.17 f
+  data arrival time                                                 58.17
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+To : filter_out[2]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_out_reg_2_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: filter_out[2]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter_out_reg_2_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)        0.00       0.00 r
+  filter_out_reg_2_/Q (SC7P5T_SDFFRQX2_A_CSC20L)         58.17      58.17 f
+  filter_out[2] (out)                                     0.00      58.17 f
+  data arrival time                                                 58.17
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+To : filter_out[1]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_out_reg_1_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: filter_out[1]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter_out_reg_1_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)        0.00       0.00 r
+  filter_out_reg_1_/Q (SC7P5T_SDFFRQX2_A_CSC20L)         58.17      58.17 f
+  filter_out[1] (out)                                     0.00      58.17 f
+  data arrival time                                                 58.17
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+****************************************
+To : filter_out[0]
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rrc_filter
+Version: V-2023.12-SP5-4
+Date   : Thu Jul 17 09:22:14 2025
+****************************************
+
+Operating Conditions: TT_0P80V_0P00V_0P00V_0P00V_25C   Library: GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: filter_out_reg_0_
+              (rising edge-triggered flip-flop clocked by cnt_clk)
+  Endpoint: filter_out[0]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter_out_reg_0_/CLK (SC7P5T_SDFFRQX2_A_CSC20L)        0.00       0.00 r
+  filter_out_reg_0_/Q (SC7P5T_SDFFRQX2_A_CSC20L)         58.17      58.17 f
+  filter_out[0] (out)                                     0.00      58.17 f
+  data arrival time                                                 58.17
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

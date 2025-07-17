@@ -1,0 +1,1097 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version V-2023.12-SP5-4 for linux64 - Jan 29, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Thu Jul 17 09:21:32 2025
+Hostname:           kccisynop2
+CPU Model:          INTEL(R) XEON(R) GOLD 6526Y
+CPU Details:        Cores = 1 : Sockets = 1 : Cache Size = 38400 KB : Freq = 2.80 GHz
+OS:                 Linux 5.14.0-427.13.1.el9_4.x86_64
+RAM:                1007 GB (Free 976 GB)
+Swap:                 3 GB (Free   3 GB)
+Work Filesystem:    /home mounted to /dev/mapper/rhel-home
+Tmp Filesystem:     / mounted to /dev/mapper/rhel-root
+Work Disk:          2690 GB (Free 2522 GB)
+Tmp Disk:           2665 GB (Free 2190 GB)
+
+CPU Load: 124%, Ram Free: 976 GB, Swap Free: 3 GB, Work Disk Free: 2522 GB, Tmp Disk Free: 2190 GB
+#operation condition : BC / TC / WC
+set min_cond "BC"
+BC
+set max_cond "WC"
+WC
+set used_vt  {"hvt" "svt" "lvt"}
+"hvt" "svt" "lvt"
+set designName "rrc_filter"
+rrc_filter
+set revName     "rrc_filter_0"
+rrc_filter_0
+set outputName "${revName}"
+rrc_filter_0
+set file_script  "rrc_filter.tcl"
+rrc_filter.tcl
+set file_sdc_input "rrc_filter.sdc"
+rrc_filter.sdc
+set file_hdl_list "rrc_filter.list"
+rrc_filter.list
+source scripts/set_var.tcl
+/home/aedu46/DSP_DIR/rrc_SYN/output/rrc_filter_0/rrc_filter_0.pwr.v
+set file_script_bak [list $file_script $file_sdc_input]
+rrc_filter.tcl rrc_filter.sdc
+source scripts/file_works.tcl
+define_design_lib WORK -path $dir_out/work
+1
+source scripts/env.tcl
+#source $file_analyze
+source $file_hdl_list
+Running PRESTO HDLC
+Compiling source file ./src/rrc_filter.sv
+Presto compilation completed successfully.
+Loading db file '/tools/synopsys/syn/V-2023.12-SP5-4/libraries/syn/dw_foundation.sldb'
+1
+#source scr/analyze_list
+DATE_STAMP "start" $file_stamp
+elaborate $designName
+Loading db file '/tools/synopsys/syn/V-2023.12-SP5-4/libraries/syn/gtech.db'
+Loading db file '/tools/synopsys/syn/V-2023.12-SP5-4/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./src/rrc_filter.sv:81: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine rrc_filter line 22 in file
+		'./src/rrc_filter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  shift_reg_out_reg  | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine rrc_filter line 97 in file
+		'./src/rrc_filter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   filter_out_reg    | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (rrc_filter)
+Elaborated 1 design.
+Current design is now 'rrc_filter'.
+Information: Building the design 'multiplier_9b' instantiated from design 'rrc_filter' with
+	the parameters "WIDTH=9". (HDL-193)
+Presto compilation completed successfully. (multiplier_9b_WIDTH9)
+1
+source scripts/condition.tcl
+Information: Command 'set_max_leakage_power' is obsolete and is being ignored. (INFO-102)
+0
+source $file_sdc_input
+Current design is 'rrc_filter'.
+Current design is 'rrc_filter'.
+set_svf $file_svf
+1
+set_host_options -max_cores 6 
+1
+#write_sdc $file_sdc_syn.0
+#echo "------------------------------" >> $file_check
+check_design >> ${file_check_design}.pre
+check_timing >> ${file_check_timing}.pre
+compile_ultra -scan -gate_clock -no_autoungroup
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 1%, Ram Free: 975 GB, Swap Free: 3 GB, Work Disk Free: 2522 GB, Tmp Disk Free: 2190 GB
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 6 cores. (OPT-1500)
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | V-2023.12-DWBB_202312.5 |     *     |
+| Licensed DW Building Blocks        | V-2023.12-DWBB_202312.5 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra -no_autoungroup -scan -gate_clock                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 372                                    |
+| Number of User Hierarchies                              | 33                                     |
+| Sequential Cell Count                                   | 297                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 1                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 6                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 350 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 33 instances of design 'multiplier_9b_WIDTH9'. (OPT-1056)
+  Simplifying Design 'rrc_filter'
+Information: Performing clock-gating with positive edge logic: 'integrated' and negative edge logic: 'integrated'. (PWR-1047)
+
+Loaded alib file './alib-52/GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C.db.alib'
+CPU Load: 2%, Ram Free: 975 GB, Swap Free: 3 GB, Work Disk Free: 2522 GB, Tmp Disk Free: 2190 GB
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'rrc_filter'
+ Implement Synthetic for 'rrc_filter'.
+  Processing 'multiplier_9b_WIDTH9_1'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_1'.
+  Processing 'multiplier_9b_WIDTH9_2'
+  Processing 'multiplier_9b_WIDTH9_15'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_15'.
+  Processing 'multiplier_9b_WIDTH9_5'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_5'.
+  Processing 'multiplier_9b_WIDTH9_7'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_7'.
+  Processing 'multiplier_9b_WIDTH9_10'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_10'.
+  Processing 'multiplier_9b_WIDTH9_11'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_11'.
+  Processing 'multiplier_9b_WIDTH9_12'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_12'.
+  Processing 'multiplier_9b_WIDTH9_13'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_13'.
+  Processing 'multiplier_9b_WIDTH9_14'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_14'.
+  Processing 'multiplier_9b_WIDTH9_16'
+ Implement Synthetic for 'multiplier_9b_WIDTH9_16'.
+  Processing 'multiplier_9b_WIDTH9_0'
+CPU Load: 2%, Ram Free: 975 GB, Swap Free: 3 GB, Work Disk Free: 2522 GB, Tmp Disk Free: 2190 GB
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'SC7P5T_TIELOX1_CSC20L' in the library 'GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C' is not characterized for internal power. (PWR-536)
+Information: The library cell 'SC7P5T_TIEHIX1_CSC20L' in the library 'GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_32, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_31, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_30, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_27, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_25, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_22, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_21, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_20, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_19, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_18, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_17, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_16, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design rrc_filter_DP_OP_95J1_122_318_J1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_1_DW_mult_tc_J1_0_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_5_DW_mult_tc_J1_0_DW_mult_tc_J1_2_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_7_DW_mult_tc_J1_0_DW_mult_tc_J1_3_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_10_DW_mult_tc_J1_0_DW_mult_tc_J1_4_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_11_DW_mult_tc_J1_0_DW_mult_tc_J1_5_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_12_DW_mult_tc_J1_0_DW_mult_tc_J1_6_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_13_DW_mult_tc_J1_0_DW_mult_tc_J1_7_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_14_DW_mult_tc_J1_0_DW_mult_tc_J1_8_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_15_DW_mult_tc_J1_0_DW_mult_tc_J1_1_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_16_DW_mult_tc_J1_0_DW_mult_tc_J1_9, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_4, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_28, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_15, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_5, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_8, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_24, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_7, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_10, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_11, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_12, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_13, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_14, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_3, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_6, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_9, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_23, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_26, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_29, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_1_DW_mult_tc_J1_0_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_1_DW_mult_tc_J1_0_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_1_DW_mult_tc_J1_0_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_15_DW_mult_tc_J1_0_DW_mult_tc_J1_1_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_5_DW_mult_tc_J1_0_DW_mult_tc_J1_2_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_5_DW_mult_tc_J1_0_DW_mult_tc_J1_2_1, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_5_DW_mult_tc_J1_0_DW_mult_tc_J1_2_2, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_7_DW_mult_tc_J1_0_DW_mult_tc_J1_3_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_10_DW_mult_tc_J1_0_DW_mult_tc_J1_4_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_11_DW_mult_tc_J1_0_DW_mult_tc_J1_5_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_12_DW_mult_tc_J1_0_DW_mult_tc_J1_6_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_13_DW_mult_tc_J1_0_DW_mult_tc_J1_7_0, since there are no registers. (PWR-806)
+Information: Skipping clock gating on design multiplier_9b_WIDTH9_14_DW_mult_tc_J1_0_DW_mult_tc_J1_8_0, since there are no registers. (PWR-806)
+Information: Performing clock-gating on design rrc_filter. (PWR-730)
+Information: Automatic shift-register identification is enabled for scan. Not all registers will be scan-replaced. (OPT-467)
+Information: Removing unused design 'multiplier_9b_WIDTH9_32'. (OPT-1055)
+Information: Removing unused design 'multiplier_9b_WIDTH9_0'. (OPT-1055)
+Information: Removing unused design 'multiplier_9b_WIDTH9_3'. (OPT-1055)
+Information: Removing unused design 'multiplier_9b_WIDTH9_6'. (OPT-1055)
+Information: Removing unused design 'multiplier_9b_WIDTH9_9'. (OPT-1055)
+Information: Removing unused design 'multiplier_9b_WIDTH9_23'. (OPT-1055)
+Information: Removing unused design 'multiplier_9b_WIDTH9_26'. (OPT-1055)
+Information: Removing unused design 'multiplier_9b_WIDTH9_29'. (OPT-1055)
+
+Threshold voltage group cell usage:
+>> CSC20L 100.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_31'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_27'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_25'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_22'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_21'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_20'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_19'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_18'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_16'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_1'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_28'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_5'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_8'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_24'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_7'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_10'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_11'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_12'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_13'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_14'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:08    2153.4    134.54    1136.2    2649.6                              6.1916
+    0:00:08    2143.1    136.01    1144.0    2639.6                              6.1628
+
+Threshold voltage group cell usage:
+>> CSC20L 100.00%
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+Threshold voltage group cell usage:
+>> CSC20L 100.00%
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Mapping 'rrc_filter_DP_OP_95J1_122_318_0'
+Information: Added key list 'DesignWare' to design 'rrc_filter'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_17'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'multiplier_9b_WIDTH9_15'. (DDB-72)
+
+Threshold voltage group cell usage:
+>> CSC20L 100.00%
+
+  Beginning Isolate Ports
+  -----------------------
+
+Threshold voltage group cell usage:
+>> CSC20L 100.00%
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:10    1458.2    253.39    2070.5    3252.4                              4.2128
+    0:00:11    1434.6    113.33    1011.8    3123.5                              3.9554
+    0:00:11    1434.6    113.33    1011.8    3123.5                              3.9554
+    0:00:12    1435.2    113.33    1011.8    3124.1                              3.9575
+
+Threshold voltage group cell usage:
+>> CSC20L 100.00%
+    0:00:12    1433.8    113.55    1015.6    3120.3                              3.9559
+    0:00:12    1432.2    115.84    1028.7    3117.5                              3.9516
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:12    1414.5    115.05    1027.0    3089.6                              3.8872
+    0:00:12    1425.4    111.93     988.5    3078.7                              3.9325
+    0:00:12    1425.4    111.93     988.5    3078.7                              3.9325
+    0:00:12    1425.4    111.93     988.5    3078.7                              3.9325
+    0:00:12    1425.4    111.93     988.5    3078.7                              3.9325
+    0:00:13    1424.4    111.93     988.5    3076.9                              3.9308
+    0:00:13    1424.4    111.93     988.5    3076.9                              3.9308
+    0:00:13    1454.5    108.80     971.5    3100.0                              4.0328
+    0:00:13    1454.5    108.80     971.5    3100.0                              4.0328
+    0:00:13    1456.7    108.22     963.5    3101.8                              4.0501
+    0:00:13    1456.7    108.22     963.5    3101.8                              4.0501
+    0:00:14    1518.4    106.15     945.6    3137.4                              4.2802
+    0:00:14    1518.4    106.15     945.6    3137.4                              4.2802
+    0:00:15    1545.2     98.19     859.5    3158.4                              4.3804
+    0:00:15    1545.2     98.19     859.5    3158.4                              4.3804
+    0:00:15    1545.8     98.16     852.7    3159.4                              4.3832
+    0:00:15    1545.8     98.16     852.7    3159.4                              4.3832
+    0:00:15    1550.4     97.79     846.8    3156.2                              4.4014
+    0:00:15    1550.4     97.79     846.8    3156.2                              4.4014
+    0:00:15    1550.4     97.79     846.8    3156.2                              4.4014
+    0:00:15    1550.4     97.79     846.8    3156.2                              4.4014
+    0:00:15    1550.4     97.79     846.8    3156.2                              4.4014
+    0:00:15    1550.4     97.79     846.8    3156.2                              4.4014
+    0:00:15    1550.4     97.79     846.8    3156.2                              4.4014
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:15    1550.4     97.79     846.8    3156.2                              4.4014
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:18    1571.4    112.90     959.3    1973.3 net12787                     4.6965
+    0:00:19    1649.9    112.88     988.6    1916.2 MUL16/net11797               5.2307
+    0:00:20    1669.9    106.39     941.5    1878.6 MUL14/net12561               5.3471
+    0:00:21    1674.8    118.72    1044.7    1868.1 filter_out_reg[5]/D          5.3648
+    0:00:21    1694.0    132.24    1170.0    1838.0 filter_out_reg[8]/D          5.4662
+    0:00:22    1707.2    147.31    1295.2    1828.0 net11139                     5.5356
+    0:00:22    1711.0    131.21    1152.6    1824.1 filter_out_reg[7]/D          5.5575
+    0:00:22    1711.0    131.21    1152.6    1824.1                              5.5575
+    0:00:24    1796.7    112.92     987.6    1982.1                              5.7767
+    0:00:24    1793.8    112.01     947.0    1979.9                              5.7658
+    0:00:25    1807.2    109.42     938.0    2000.4                              5.7997
+    0:00:25    1807.2    109.42     938.0    2000.4                              5.7997
+    0:00:25    1806.1    109.42     938.0    1999.0                              5.7938
+    0:00:25    1806.1    109.42     938.0    1999.0                              5.7938
+    0:00:25    1806.1    109.42     938.0    1999.0                              5.7938
+    0:00:25    1806.1    109.42     938.0    1999.0                              5.7938
+    0:00:25    1807.6    107.27     917.6    1996.9                              5.7975
+    0:00:25    1807.6    107.27     917.6    1996.9                              5.7975
+    0:00:25    1816.3    106.04     921.4    2005.5                              5.8224
+    0:00:25    1816.3    106.04     921.4    2005.5                              5.8224
+    0:00:26    1828.5     94.57     800.5    2027.1                              5.8658
+    0:00:26    1828.5     94.57     800.5    2027.1                              5.8658
+    0:00:26    1827.1     94.51     800.2    2028.8                              5.8620
+    0:00:26    1827.1     94.51     800.2    2028.8                              5.8620
+    0:00:26    1829.9     93.42     802.0    2031.1                              5.8696
+    0:00:26    1829.9     93.42     802.0    2031.1                              5.8696
+    0:00:26    1829.9     93.42     802.0    2031.1                              5.8696
+    0:00:26    1829.9     93.42     802.0    2031.1                              5.8696
+    0:00:26    1829.9     93.42     802.0    2031.1                              5.8696
+    0:00:26    1829.9     93.42     802.0    2031.1                              5.8696
+    0:00:26    1829.9     93.42     802.0    2031.1                              5.8696
+    0:00:26    1999.5    121.59    1055.7    2080.8                              6.9365
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:27    1999.5    121.59    1055.7    2080.8                              6.9365
+    0:00:27    1720.2    121.77    1060.3    1960.6                              5.5196
+    0:00:27    1727.9    103.68     897.9    1961.6                              5.5444
+    0:00:27    1727.9    103.68     897.9    1961.6                              5.5444
+    0:00:28    1722.3    103.68     897.9    1960.7                              5.5113
+    0:00:28    1731.2    103.68     898.3    1946.7 MUL17/mul_out[15]            5.5481
+    0:00:29    1754.6    103.64     904.6    1945.4 MUL10/net13671               5.7092
+    0:00:30    1764.8    103.64     904.7    1931.3 net13313                     5.7608
+    0:00:30    1771.7    102.76     898.7    1931.5 filter_out_reg[6]/D          5.7924
+    0:00:31    1787.3    141.08    1246.3    1902.5 filter_out_reg[8]/D          5.8930
+    0:00:31    1793.3    126.52    1124.7    1894.0 filter_out_reg[8]/D          5.9211
+    0:00:32    1793.8    130.29    1161.0    1892.9 MUL31/mul_out[1]             5.9255
+    0:00:32    1804.6    144.24    1254.9    1882.2                              5.9819
+    0:00:33    1753.4     94.70     825.2    1933.4                              5.6083
+    0:00:33    1753.4     94.70     825.2    1933.4                              5.6083
+    0:00:33    1750.7     94.12     806.7    1929.7                              5.5996
+    0:00:33    1852.0    109.20     938.1    1956.6                              6.2353
+    0:00:33    1849.8    106.06     908.2    1954.3                              6.1935
+    0:00:33    1748.2    106.06     908.2    1933.3                              5.6061
+CPU Load: 4%, Ram Free: 975 GB, Swap Free: 3 GB, Work Disk Free: 2522 GB, Tmp Disk Free: 2190 GB
+Loading db file '/pdk/GF22FDX_SC7P5T_116CPP_BASE_CSC20L_FDK_RELV02R80/db/GF22FDX_SC7P5T_116CPP_BASE_CSC20L_TT_0P80V_0P00V_0P00V_0P00V_25C.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Unable to resolve reference 'SC7P5T_SDFFRQX4_S_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_DFFRQX1_AS_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_DFFRQX4_S_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_SDFFRQX2_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_DFFRQNX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_SDFFRQX4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X6_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21IAX3_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21IAX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR3X4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FCGENIX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX1_MR_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FAX2_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO22IA1A2X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FCGENIX1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FAX6_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21IAX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR3X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKOA21X3_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FCGENIX4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR3X4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA22IA1A2X3_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FAX1_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI211X4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X3_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX6_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X4_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR3X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FAX4_P_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_P_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_HAX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKXOR2X4_P_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X1_MR_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX20_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO22IA1A2X4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO22IA1A2X1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX4_A_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X3_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR3IAX2_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X4_P_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21IAX4_P_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21IAX1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_TIEHIX1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_TIELOX1_CSC20L' in 'rrc_filter'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X3_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X6_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X3_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X8_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX4_A_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_31'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_30'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_30'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_30'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_CSC20L' in 'multiplier_9b_WIDTH9_30'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X2_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X3_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X4_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X3_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X6_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X3_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X6_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21IAX3_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_28'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_27'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_27'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_27'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X3_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X3_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR3X4_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX6_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X8_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X6_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR3X3_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'multiplier_9b_WIDTH9_25'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX16_CSC20L' in 'multiplier_9b_WIDTH9_24'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_24'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX1_A_CSC20L' in 'multiplier_9b_WIDTH9_24'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_24'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_24'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX3_CSC20L' in 'multiplier_9b_WIDTH9_24'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X3_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21IAX2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X4_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X1_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X1_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_22'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_21'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_P_CSC20L' in 'multiplier_9b_WIDTH9_21'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_21'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_A_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X4_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKXOR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X1_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_20'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X3_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21IAX2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX4_A_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX6_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'multiplier_9b_WIDTH9_19'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X6_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X4_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX4_A_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21IAX2_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X6_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X1_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR3X4_P_CSC20L' in 'multiplier_9b_WIDTH9_18'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_A_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X3_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X4_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FAX2_A_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX6_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKAN2ICLKX4_P_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X1_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X1_L_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FAX4_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX8_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X1_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKXOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_17'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21IAX4_P_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X4_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX4_A_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FCGENIX1_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21IAX2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX6_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X1_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR3X2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKXOR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X3_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX1_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X1_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_16'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21IAX2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX12_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X4_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI31X3_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FAX4_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_FAX2_A_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X1_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X1_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX4_A_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X1_L_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX6_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX8_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKAN2ICLKX6_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKXOR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X1_CSC20L' in 'multiplier_9b_WIDTH9_15'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X4_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX6_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X4_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR3X2_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21IAX2_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21IAX1_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_14'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X3_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X3_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKXOR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_13'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X1_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X4_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKXOR2X4_P_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_12'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_11'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_11'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X1_L_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X3_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X6_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA22IA1A2X3_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XNR2X2_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X4_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AN2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X2_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21IAX1_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X1_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_XOR2X2_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX6_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X2_A_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OAI21X1_CSC20L' in 'multiplier_9b_WIDTH9_10'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_8'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX3_CSC20L' in 'multiplier_9b_WIDTH9_8'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_8'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_8'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X4_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR3X6_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X4_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX6_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X4_P_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X6_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X3_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X3_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X6_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_7'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_P_CSC20L' in 'multiplier_9b_WIDTH9_5'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_5'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_5'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX6_CSC20L' in 'multiplier_9b_WIDTH9_5'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'multiplier_9b_WIDTH9_5'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X3_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X3_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X1_MR_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND3IAX6_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX3_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X2_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX2_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X2_MR_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X2_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X4_P_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X6_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_4'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_A_CSC20L' in 'multiplier_9b_WIDTH9_2'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX4_CSC20L' in 'multiplier_9b_WIDTH9_2'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX2_A_CSC20L' in 'multiplier_9b_WIDTH9_2'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_BUFX8_CSC20L' in 'multiplier_9b_WIDTH9_2'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X2_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND3X6_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X6_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X4_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX1_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21IAX3_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AOI21X3_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX4_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX4_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_AO21X4_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OR2X4_A_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2X3_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_NR2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2X6_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_CKBUFX2_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_INVX2_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_ND2IAX3_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Warning: Unable to resolve reference 'SC7P5T_OA21X2_CSC20L' in 'multiplier_9b_WIDTH9_1'. (LINK-5)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+CPU Load: 4%, Ram Free: 975 GB, Swap Free: 3 GB, Work Disk Free: 2522 GB, Tmp Disk Free: 2190 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+DATE_STAMP "  end : synth of TOP" $file_stamp
+source scripts/report.tcl
+Writing ddc file '/home/aedu46/DSP_DIR/rrc_SYN/output/rrc_filter_0/rrc_filter_0.ddc'.
+Writing verilog file '/home/aedu46/DSP_DIR/rrc_SYN/output/rrc_filter_0/rrc_filter_0.v'.
+DATE_STAMP "end" $file_stamp
+#exit
+dc_shell> exit
+
+Memory usage for this session 743 Mbytes.
+Memory usage for this session including child processes 845 Mbytes.
+CPU usage for this session 89 seconds ( 0.02 hours ).
+Elapsed time for this session 46 seconds ( 0.01 hours ).
+
+Thank you...

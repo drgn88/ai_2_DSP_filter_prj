@@ -68,7 +68,7 @@ RRC_filter Design
 > 만든 rrc_filter.sv를 바탕으로 Synthesis도 수행함
 
 ### 합성 결과
-
+> sdc에서 period 1000으로 줬을 때
 |timing_max.rpt|
 |:---:|
 |<img src="./img/스크린샷 2025-07-16 182912.png">|
@@ -103,4 +103,6 @@ RRC_filter Design
 - 전체 변환 비트를 Saturation해야되는데 정수부만 포화시킴
   - ⚠️회로 내에서 연산할 때는 정수(integer) 연산으로 수행
   - 회로 연산의 결과를 해석자가 실수로 변환할 때 소수부 비트수만큼 2의 지수승으로 나눠주기만 하면됨
+
+# 250716
 
